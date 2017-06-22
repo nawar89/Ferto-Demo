@@ -1,8 +1,6 @@
 package com.mangu.fertodemo.inyection.components;
 
 
-
-
 import com.mangu.fertodemo.inyection.ConfigPersistent;
 import com.mangu.fertodemo.inyection.modules.ActivityModule;
 import com.mangu.fertodemo.inyection.modules.FragmentModule;

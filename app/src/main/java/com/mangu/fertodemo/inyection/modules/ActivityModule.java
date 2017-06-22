@@ -3,7 +3,6 @@ package com.mangu.fertodemo.inyection.modules;
 import android.app.Activity;
 import android.content.Context;
 
-
 import com.mangu.fertodemo.inyection.ActivityContext;
 
 import dagger.Module;

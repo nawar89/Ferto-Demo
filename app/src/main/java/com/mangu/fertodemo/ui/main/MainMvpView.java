@@ -5,6 +5,4 @@ import com.mangu.fertodemo.ui.base.MvpView;
 
 public interface MainMvpView extends MvpView {
 
-
-    void showError(Throwable error);
 }

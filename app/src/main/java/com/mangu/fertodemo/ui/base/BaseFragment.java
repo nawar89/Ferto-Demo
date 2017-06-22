@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import com.mangu.fertodemo.StarterApp;
 import com.mangu.fertodemo.inyection.components.ConfigPersistentComponent;
 import com.mangu.fertodemo.inyection.components.DaggerConfigPersistentComponent;

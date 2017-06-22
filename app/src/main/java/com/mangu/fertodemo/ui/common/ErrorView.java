@@ -8,7 +8,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
-
 import com.mangu.fertodemo.R;
 
 import butterknife.ButterKnife;

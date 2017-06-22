@@ -7,7 +7,6 @@ import android.support.v4.util.LongSparseArray;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-
 import com.mangu.fertodemo.StarterApp;
 import com.mangu.fertodemo.inyection.components.ActivityComponent;
 import com.mangu.fertodemo.inyection.components.ConfigPersistentComponent;

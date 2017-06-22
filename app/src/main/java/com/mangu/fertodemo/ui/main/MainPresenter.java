@@ -1,7 +1,6 @@
 package com.mangu.fertodemo.ui.main;
 
 
-
 import com.mangu.fertodemo.data.DataManager;
 import com.mangu.fertodemo.inyection.ConfigPersistent;
 import com.mangu.fertodemo.ui.base.BasePresenter;

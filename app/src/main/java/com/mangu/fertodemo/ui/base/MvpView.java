@@ -7,5 +7,6 @@ package com.mangu.fertodemo.ui.base;
  * that then usually will be implemented by an Activity or Fragment.
  */
 public interface MvpView {
+    void showError(Throwable error);
 
 }

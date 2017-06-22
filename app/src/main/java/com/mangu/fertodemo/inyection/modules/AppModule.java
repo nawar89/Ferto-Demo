@@ -3,7 +3,6 @@ package com.mangu.fertodemo.inyection.modules;
 import android.app.Application;
 import android.content.Context;
 
-
 import com.mangu.fertodemo.data.remote.StarterService;
 import com.mangu.fertodemo.data.remote.StarterServiceFactory;
 import com.mangu.fertodemo.inyection.AppContext;

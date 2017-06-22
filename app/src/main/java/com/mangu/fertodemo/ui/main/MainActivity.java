@@ -1,7 +1,6 @@
 package com.mangu.fertodemo.ui.main;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.mangu.fertodemo.R;
 import com.mangu.fertodemo.ui.base.BaseActivity;
@@ -30,6 +29,7 @@ public class MainActivity extends BaseActivity implements MainMvpView {
     public void showError(Throwable error) {
         Timber.e(error, "There was an error");
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

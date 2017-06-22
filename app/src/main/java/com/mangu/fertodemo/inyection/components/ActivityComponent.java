@@ -1,7 +1,6 @@
 package com.mangu.fertodemo.inyection.components;
 
 
-
 import com.mangu.fertodemo.inyection.PerActivity;
 import com.mangu.fertodemo.inyection.modules.ActivityModule;
 import com.mangu.fertodemo.ui.base.BaseActivity;
