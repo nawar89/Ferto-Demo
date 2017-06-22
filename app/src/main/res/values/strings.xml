@@ -8,4 +8,14 @@
     <string name="ventajas_ferto"><u>Descubre las ventajas de ferto.io </u></string>
     <string name="producto">Producto</string>
     <string name="productos_destacados">Productos destacados de su zona</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="tipo_cliente">Tipo de cliente</string>
+    <string name="registrarse">Registrarse</string>
+    <string-array name="spinner_register">
+        <item>Consumidor</item>
+        <item>Intermediario</item>
+        <item>Comerciante</item>
+    </string-array>
 </resources>
+
