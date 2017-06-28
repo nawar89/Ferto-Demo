@@ -14,6 +14,7 @@ import dagger.Subcomponent;
 @PerActivity
 @Subcomponent(modules = ActivityModule.class)
 public interface ActivityComponent {
+
     void inject(BaseActivity baseActivity);
 
     void inject(MainActivity mainActivity);

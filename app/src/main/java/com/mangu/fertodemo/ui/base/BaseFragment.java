@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 import timber.log.Timber;
 
 public abstract class BaseFragment extends Fragment {
+
     private static final String KEY_FRAGMENT_ID = "KEY_FRAGMENT_ID";
     private static final LongSparseArray<ConfigPersistentComponent> sComponentsArray =
             new LongSparseArray<>();

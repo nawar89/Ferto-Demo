@@ -1,14 +1,17 @@
 package com.mangu.fertodemo.data.local;
 
 public class Product {
+
     private String mName;
     private double mPrice;
     private String mCity;
     private String mVendor;
     private int mPicture;
+
     public Product() {
 
     }
+
     public Product(String mName, double mPrice, String mCity, String mVendor, int mPicture) {
         this.mName = mName;
         this.mPrice = mPrice;

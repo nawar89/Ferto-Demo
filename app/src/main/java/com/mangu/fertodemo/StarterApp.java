@@ -11,6 +11,7 @@ import com.squareup.leakcanary.LeakCanary;
 import timber.log.Timber;
 
 public class StarterApp extends Application {
+
     AppComponent mApplicationComponent;
 
     public static StarterApp get(Context context) {

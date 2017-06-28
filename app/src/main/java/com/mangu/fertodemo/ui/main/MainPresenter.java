@@ -9,6 +9,7 @@ import javax.inject.Inject;
 
 @ConfigPersistent
 public class MainPresenter extends BasePresenter<MainMvpView> {
+
     private final DataManager mDataManager;
 
     @Inject

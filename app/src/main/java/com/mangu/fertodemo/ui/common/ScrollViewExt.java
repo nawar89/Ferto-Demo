@@ -8,6 +8,7 @@ import com.mangu.fertodemo.ui.base.ScrollViewListener;
 
 
 public class ScrollViewExt extends ScrollView {
+
     private ScrollViewListener mScrollViewListener = null;
 
     public ScrollViewExt(Context context) {

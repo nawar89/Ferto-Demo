@@ -3,6 +3,8 @@ package com.mangu.fertodemo.ui.explore;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.mangu.fertodemo.R;
 import com.mangu.fertodemo.data.local.Product;
@@ -20,7 +22,8 @@ import timber.log.Timber;
 
 import static com.mangu.fertodemo.util.ViewUtils.dpToPx;
 
-public class ExploreActivity extends BaseActivity implements ExploreMvpView {
+public class ExploreActivity extends BaseActivity implements ExploreMvpView, OnClickListener {
+
     @Inject
     ExplorePresenter mExplorePresenter;
 
@@ -36,6 +39,7 @@ public class ExploreActivity extends BaseActivity implements ExploreMvpView {
         mExplorePresenter.attachView(this);
         mProductList = new ArrayList<>();
         mProductAdapter = new ProductAdapter(getApplicationContext(), mProductList);
+        mProductAdapter.setOnClickListener(this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(
                 getApplicationContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -65,5 +69,11 @@ public class ExploreActivity extends BaseActivity implements ExploreMvpView {
     public void processProducts(List<Product> productList) {
         mProductList.addAll(productList);
         mProductAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onClick(View view) {
+        Product product = mProductList.get(mRecyclerView.getChildAdapterPosition(view));
+        mExplorePresenter.processClick(view, product);
     }
 }

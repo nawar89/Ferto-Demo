@@ -13,6 +13,7 @@ import retrofit2.HttpException;
 import timber.log.Timber;
 
 public class NetworkUtils {
+
     public static boolean isHttpStatusCode(Throwable throwable, int statusCode) {
         return throwable instanceof HttpException
                 && ((HttpException) throwable).code() == statusCode;
@@ -28,7 +29,6 @@ public class NetworkUtils {
     /**
      * For quick data hits.
      *
-     * @param url
      * @return String content
      */
     public static String getURLContent(String url) {

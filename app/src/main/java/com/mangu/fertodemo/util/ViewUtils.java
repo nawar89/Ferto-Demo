@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.view.inputmethod.InputMethodManager;
 
 public class ViewUtils {
+
     public static float pxToDp(float px) {
         float densityDpi = Resources.getSystem().getDisplayMetrics().densityDpi;
         return px / (densityDpi / 160f);

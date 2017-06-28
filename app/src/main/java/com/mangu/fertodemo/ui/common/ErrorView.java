@@ -49,6 +49,7 @@ public class ErrorView extends LinearLayout {
     }
 
     public interface ErrorListener {
+
         void onReloadData();
     }
 }

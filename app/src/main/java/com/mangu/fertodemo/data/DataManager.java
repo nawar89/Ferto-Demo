@@ -7,6 +7,7 @@ import javax.inject.Singleton;
 
 @Singleton
 public class DataManager {
+
     private final StarterService mStarterService;
 
     @Inject

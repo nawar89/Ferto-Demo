@@ -35,7 +35,9 @@ public class BasePresenter<T extends MvpView> implements Presenter<T> {
     }
 
     public void checkViewAttached() {
-        if (!isViewAttached()) throw new MvpViewNotAttachedException();
+        if (!isViewAttached()) {
+            throw new MvpViewNotAttachedException();
+        }
     }
 
     public void addSubscription(Subscription subs) {
@@ -43,6 +45,7 @@ public class BasePresenter<T extends MvpView> implements Presenter<T> {
     }
 
     private static class MvpViewNotAttachedException extends RuntimeException {
+
         MvpViewNotAttachedException() {
             super("Please call Presenter.attachView(MvpView) before" +
                     " requesting data to the Presenter");
@@ -50,6 +53,7 @@ public class BasePresenter<T extends MvpView> implements Presenter<T> {
     }
 
     protected static class DataResult<T> {
+
         private T mData;
         private Throwable mError;
 

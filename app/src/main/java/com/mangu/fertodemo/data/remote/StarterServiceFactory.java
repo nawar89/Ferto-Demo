@@ -17,6 +17,7 @@ import timber.log.Timber;
 import static com.mangu.fertodemo.BuildConfig.OpenWeatherApiToken;
 
 public class StarterServiceFactory {
+
     public static StarterService makeStarterService() {
         return makeStarterService(makeGson());
 
@@ -25,7 +26,7 @@ public class StarterServiceFactory {
     private static StarterService makeStarterService(Gson gson) {
         //TODO The "" will crash when called
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl("http://www.google.es")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(makeOkHttpClient())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
