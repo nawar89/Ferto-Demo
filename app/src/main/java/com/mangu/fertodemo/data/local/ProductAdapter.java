@@ -12,7 +12,6 @@ import com.bumptech.glide.Glide;
 import com.mangu.fertodemo.R;
 
 import java.util.List;
-import java.util.Locale;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductHolder> implements
         View.OnClickListener {
@@ -37,8 +36,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductH
     @Override
     public void onBindViewHolder(ProductHolder holder, int position) {
         Product product = mProductList.get(position);
-        holder.mPrice.setText(String.format(Locale.getDefault().getCountry(),
-                product.getPrice()));
+        holder.mPrice.setText(Double.toString(product.getPrice()));
         holder.mName.setText(product.getName());
         Glide.with(mContext)
                 .load(product.getPicture())

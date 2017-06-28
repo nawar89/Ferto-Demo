@@ -4,6 +4,7 @@ package com.mangu.fertodemo.inyection.components;
 import com.mangu.fertodemo.inyection.PerActivity;
 import com.mangu.fertodemo.inyection.modules.ActivityModule;
 import com.mangu.fertodemo.ui.base.BaseActivity;
+import com.mangu.fertodemo.ui.detail.DetailActivity;
 import com.mangu.fertodemo.ui.explore.ExploreActivity;
 import com.mangu.fertodemo.ui.main.MainActivity;
 import com.mangu.fertodemo.ui.register.RegisterActivity;
@@ -22,6 +23,8 @@ public interface ActivityComponent {
     void inject(ExploreActivity exploreActivity);
 
     void inject(RegisterActivity registerActivity);
+
+    void inject(DetailActivity detailActivity);
 
 }
 

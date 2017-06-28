@@ -1,5 +1,6 @@
 package com.mangu.fertodemo.ui.explore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import com.mangu.fertodemo.data.local.Product;
 import com.mangu.fertodemo.data.local.ProductAdapter;
 import com.mangu.fertodemo.ui.base.BaseActivity;
 import com.mangu.fertodemo.ui.common.ItemSpacingDecoration;
+import com.mangu.fertodemo.ui.detail.DetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +71,13 @@ public class ExploreActivity extends BaseActivity implements ExploreMvpView, OnC
     public void processProducts(List<Product> productList) {
         mProductList.addAll(productList);
         mProductAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void startDetailActivity(Bundle bundle) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(DetailActivity.class.getSimpleName(), bundle);
+        startActivity(intent);
     }
 
     @Override

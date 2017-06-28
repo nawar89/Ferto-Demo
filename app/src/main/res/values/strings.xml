@@ -12,6 +12,9 @@
     <string name="apellidos">Apellidos</string>
     <string name="tipo_cliente">Tipo de cliente</string>
     <string name="registrarse">Registrarse</string>
+    <string name="disponible_en">Disponible en:</string>
+    <string name="comprar">Comprar</string>
+    <string name="precio">Precio:</string>
     <string-array name="spinner_register">
         <item>Consumidor</item>
         <item>Intermediario</item>

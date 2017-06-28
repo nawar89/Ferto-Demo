@@ -1,17 +1,22 @@
 package com.mangu.fertodemo.data.local;
 
+import org.parceler.Parcel;
+import org.parceler.ParcelConstructor;
+
+@Parcel
 public class Product {
 
-    private String mName;
-    private double mPrice;
-    private String mCity;
-    private String mVendor;
-    private int mPicture;
+    String mName;
+    double mPrice;
+    String mCity;
+    String mVendor;
+    int mPicture;
 
     public Product() {
 
     }
 
+    @ParcelConstructor
     public Product(String mName, double mPrice, String mCity, String mVendor, int mPicture) {
         this.mName = mName;
         this.mPrice = mPrice;
@@ -58,5 +63,33 @@ public class Product {
 
     public void setPicture(int mPicture) {
         this.mPicture = mPicture;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Product product = (Product) o;
+
+        if (Double.compare(product.mPrice, mPrice) != 0) return false;
+        if (mPicture != product.mPicture) return false;
+        if (!mName.equals(product.mName)) return false;
+        if (!mCity.equals(product.mCity)) return false;
+        return mVendor.equals(product.mVendor);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = mName.hashCode();
+        temp = Double.doubleToLongBits(mPrice);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + mCity.hashCode();
+        result = 31 * result + mVendor.hashCode();
+        result = 31 * result + mPicture;
+        return result;
     }
 }

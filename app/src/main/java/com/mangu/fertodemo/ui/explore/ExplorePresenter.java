@@ -1,11 +1,15 @@
 package com.mangu.fertodemo.ui.explore;
 
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.mangu.fertodemo.R;
 import com.mangu.fertodemo.data.DataManager;
 import com.mangu.fertodemo.data.local.Product;
 import com.mangu.fertodemo.ui.base.BasePresenter;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +30,7 @@ public class ExplorePresenter extends BasePresenter<ExploreMvpView> {
         super.attachView(mvpView);
     }
 
-    public void prepareProducts() {
+    void prepareProducts() {
         int[] images = new int[]{
                 R.drawable.ic_fish,
                 R.drawable.ic_chufles,
@@ -45,8 +49,10 @@ public class ExplorePresenter extends BasePresenter<ExploreMvpView> {
         getMvpView().processProducts(productList);
     }
 
-    public void processClick(View view, Product product) {
-
+    void processClick(View view, Product product) {
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(Product.class.getSimpleName(), Parcels.wrap(product));
+        getMvpView().startDetailActivity(bundle);
     }
 }
 
