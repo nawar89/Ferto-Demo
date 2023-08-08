@@ -4,7 +4,7 @@
  * Gradle tasks added:
  * - checkstyle
  * - findbugs
- * - pmd
+ * - pmdasdasdasdasd
  *
  * The three tasks above are added as dependencies of the check task so running check will
  * run all of them.
