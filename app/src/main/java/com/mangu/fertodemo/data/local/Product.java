@@ -92,4 +92,8 @@ public class Product {
         result = 31 * result + mPicture;
         return result;
     }
+    public String toString() {
+        return "result" +  result +
+         "result" +  temp;
+    }
 }
